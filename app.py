@@ -13,7 +13,7 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
     # Call the FastAPI endpoint
-    response = requests.post("http://localhost:8000/predict/", files={"file": uploaded_file})
+    response = requests.post("https://0f2c-35-201-133-2.ngrok-free.app", files={"file": uploaded_file})
 
     if response.status_code == 200:
         result = response.json()
